@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jt.manage.mapper.ItemMapper">
+	
+	<!--根据分类ID查询分类名称  -->
+	<select id="findItemList" resultType="Item">
+		select * from tb_item order by updated desc
+	</select>
+	
+	<select id="selectItemCount" resultType="int">
+		select count(*) from tb_item
+	</select>
+	
+	<select id="findPageInfoList" resultType="Item">
+		select * from tb_item order by updated desc limit #{startNum},#{rows}
+	</select>
+	
+	<select id="findItemCatName" resultType="string">
+		SELECT NAME FROM tb_item_cat WHERE id = #{itemCatId}
+	</select>
+
+</mapper>

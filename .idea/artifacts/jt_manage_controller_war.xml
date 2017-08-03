@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jt-manage-controller:war">
+    <output-path>$PROJECT_DIR$/jt-manage/jt-manage-controller/target</output-path>
+    <root id="archive" name="jt-manage-controller.war">
+      <element id="artifact" artifact-name="jt-manage-controller:war exploded" />
+    </root>
+  </artifact>
+</component>
